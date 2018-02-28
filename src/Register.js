@@ -1,10 +1,17 @@
 import React, { Component } from 'react'
 
 export default class extends Component {
+  constructor(props) {
+    super(props);
+  
+    this.state = {
+      firstName: this.props.firstName,
+    }
+  }
   render(){
     return (
       <div>
-        <p>Please create your account.  Fields marked with * are required.</p>
+        <h3>Please create your account.  Fields marked with * are required.</h3>
         <form>
             <label for="FirstName">First Name: * </label>
             <input type="text" name="firstname" required/>
